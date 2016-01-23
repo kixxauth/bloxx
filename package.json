@@ -1,0 +1,28 @@
+{
+  "name"        : "bloxx",
+  "version"     : "0.1.0",
+  "description" : "JavaScript Models without MVC or databases.",
+  "main"        : "lib/bloxx.js",
+  "scripts": {
+    "test": "eslint",
+    "lint": "eslint"
+  },
+  "devDependencies" : {
+    "eslint" : "1.10.3"
+  },
+  "repository": {
+    "type" : "git",
+    "url"  : "https://github.com/kixxauth/bloxx.git"
+  },
+  "keywords": [
+    "model",
+    "models",
+    "factory",
+    "immutable"
+  ],
+  "author"  : "Kris Walker <kris@kixx.name> (www.kixx.name)",
+  "license" : "MIT",
+  "bugs"    : {
+    "url": "https://github.com/kixxauth/bloxx/issues"
+  }
+}
