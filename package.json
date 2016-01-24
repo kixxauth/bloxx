@@ -7,12 +7,17 @@
     "test": "eslint",
     "lint": "eslint"
   },
+  "dependencies": {
+    "brixx": "~1.5.0"
+  },
   "devDependencies" : {
-    "eslint" : "1.10.3"
+    "eslint"    : "~1.10.3",
+    "expect.js" : "~0.3.1",
+    "mocha"     : "~2.3.4"
   },
   "repository": {
     "type" : "git",
-    "url"  : "https://github.com/kixxauth/bloxx.git"
+    "url"  : "git+https://github.com/kixxauth/bloxx.git"
   },
   "keywords": [
     "model",
