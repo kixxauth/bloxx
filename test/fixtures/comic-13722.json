@@ -1,0 +1,60 @@
+{
+  "id": "13722",
+  "title": "Uncanny X-Men (1963) #181",
+  "issueNumber": 181,
+  "variantDescription": "",
+  "description": null,
+  "modified": "2013-02-01T11:49:39-0500",
+  "isbn": "",
+  "upc": "",
+  "diamondCode": "",
+  "ean": "",
+  "issn": "",
+  "format": "Comic",
+  "pageCount": 36,
+  "textObjects": [],
+  "resourceURI": "http://gateway.marvel.com/v1/public/comics/13722",
+  "urls": [
+    {
+      "type": "detail",
+      "url": "http://marvel.com/comics/issue/13722/uncanny_x-men_1963_181?utm_campaign=apiRef&utm_source=826a54df0e2b1b28d1a2585efcf9e2b0"
+    },
+    {
+      "type": "purchase",
+      "url": "http://comicstore.marvel.com/Uncanny-X-Men-181/digital-comic/33127?utm_campaign=apiRef&utm_source=826a54df0e2b1b28d1a2585efcf9e2b0"
+    }
+  ],
+  "series": {
+    "resourceURI": "http://gateway.marvel.com/v1/public/series/2258",
+    "name": "Uncanny X-Men (1963 - 2011)"
+  },
+  "thumbnail": {
+    "path": "http://i.annihil.us/u/prod/marvel/i/mg/c/20/510bf1dda58f6",
+    "extension": "jpg"
+  },
+  "images": [
+    {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/c/20/510bf1dda58f6",
+      "extension": "jpg"
+    }
+  ],
+  "relationships": {
+    "belongsTo": {
+      "Creator": [
+        {
+          "id": "44"
+        }
+      ]
+    },
+    "has": {
+      "Character": [
+        {
+          "id": "1009151"
+        },
+        {
+          "id": "1009718"
+        }
+      ]
+    }
+  }
+}

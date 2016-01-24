@@ -1,0 +1,34 @@
+{
+  "id": "1009151",
+  "name": "Amiko",
+  "description": "",
+  "modified": "1969-12-31T19:00:00-0500",
+  "thumbnail": {
+    "path": "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available",
+    "extension": "jpg"
+  },
+  "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009151",
+  "relationships": {
+    "belongsTo": {
+      "Comic": [
+        {
+          "id": "13722"
+        }
+      ]
+    }
+  },
+  "urls": [
+    {
+      "type": "detail",
+      "url": "http://marvel.com/characters/134/amiko?utm_campaign=apiRef&utm_source=826a54df0e2b1b28d1a2585efcf9e2b0"
+    },
+    {
+      "type": "wiki",
+      "url": "http://marvel.com/universe/Amiko?utm_campaign=apiRef&utm_source=826a54df0e2b1b28d1a2585efcf9e2b0"
+    },
+    {
+      "type": "comiclink",
+      "url": "http://marvel.com/comics/characters/1009151/amiko?utm_campaign=apiRef&utm_source=826a54df0e2b1b28d1a2585efcf9e2b0"
+    }
+  ]
+}
