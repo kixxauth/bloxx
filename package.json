@@ -4,13 +4,13 @@
   "description" : "JavaScript Models without MVC or databases.",
   "main"        : "lib/bloxx.js",
   "scripts": {
-    "test": "eslint",
-    "lint": "eslint"
+    "test": "eslint .",
+    "lint": "eslint ."
   },
   "dependencies": {
     "brixx": "~1.5.0"
   },
-  "devDependencies" : {
+  "devDependencies": {
     "eslint"    : "~1.10.3",
     "expect.js" : "~0.3.1",
     "mocha"     : "~2.3.4"
