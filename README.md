@@ -1,11 +1,10 @@
 B L O X X
 =========
-> JavaScript Models for any datastore ... or no datastore at all!
+> Immutable JavaScript Models for any datastore.
 
 [![NPM][npm-banner]][npm-banner-url]
 
 [![npm version][npm-badge]][npm-url]
-[![Bower version][bower-badge]][bower-url]
 
 Using Models in your application code has benefits even if you're not using the Model-View-Controller pattern:
 
@@ -13,7 +12,7 @@ Using Models in your application code has benefits even if you're not using the 
 * Helps to make the code self documenting.
 * Offers some structure to the data.
 
-BLOXX JavaScript Models are not part of any larger MVC framework. There isn't even much code dedicated to persistence, so you can just use BLOXX models without a database layer if you'd like.
+BLOXX JavaScript Models are not part of any larger MVC framework. Just immutable data structures to lend some structure to application code. Use them however you like!
 
 Designed to work in both the Browser (IE9+) and Node.js.
 
@@ -29,6 +28,4 @@ Unless otherwise indicated, all source code is licensed under the MIT license. S
 [npm-banner-url]: https://nodei.co/npm/bloxx/
 [npm-badge]: https://badge.fury.io/js/bloxx.svg
 [npm-url]: https://badge.fury.io/js/bloxx
-[bower-badge]: https://badge.fury.io/bo/bloxx.svg
-[bower-url]: https://badge.fury.io/bo/bloxx
 

@@ -1,7 +1,7 @@
 {
   "name"        : "bloxx",
   "version"     : "0.1.0",
-  "description" : "JavaScript Models without MVC or databases.",
+  "description" : "Immutable JavaScript Models for any datastore.",
   "main"        : "lib/bloxx.js",
   "scripts": {
     "test": "eslint .",
