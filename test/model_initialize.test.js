@@ -1,5 +1,4 @@
 /* global require describe it */
-// var Promise = require('bluebird');
 var U = require('lodash');
 var expect = require('expect.js');
 var BLOXX  = require('../lib/bloxx');
