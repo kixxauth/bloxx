@@ -4,7 +4,7 @@
   "description" : "Immutable JavaScript Models for any datastore.",
   "main"        : "lib/bloxx.js",
   "scripts": {
-    "test": "eslint .",
+    "test": "eslint . && mocha --recursive",
     "lint": "eslint ."
   },
   "dependencies": {
