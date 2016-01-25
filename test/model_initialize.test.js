@@ -1,7 +1,7 @@
 /* global require describe it */
 var U = require('lodash');
 var expect = require('expect.js');
-var BLOXX  = require('../lib/bloxx');
+var BLOXX = require('../lib/bloxx');
 var characterFixture = require('./fixtures/character-1009151');
 
 describe('Model initalization', function () {
