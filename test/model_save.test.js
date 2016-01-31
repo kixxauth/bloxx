@@ -106,7 +106,7 @@ describe('Model#save()', function () {
 
 			it('returns a new instance with relationships', function () {
 				var relationships = returnValue.relationships;
-				expect(relationships.belongsTo.Comic.length).to.be(1);
+				expect(relationships.belongsTo.Comic.length).to.be(2);
 				var comic = relationships.belongsTo.Comic[0];
 				expect(comic).to.be.a(Comic);
 			});
