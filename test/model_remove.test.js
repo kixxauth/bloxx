@@ -20,10 +20,10 @@ describe('Model#remove()', function () {
 
 	var Comic = Registry.createModel({
 		type: 'Comic',
-		defaults: {
-			title: null,
-			pageCount: null
-		},
+		allowedKeys: [
+			'title',
+			'pageCount'
+		],
 		relationshipDefinitions: 'hasCharacter belongsToCreator'
 	});
 
@@ -33,8 +33,7 @@ describe('Model#remove()', function () {
 
 	Registry.createModel({
 		type: 'Creator',
-		defaults: {
-		}
+		allowedKeys: []
 	});
 
 	var returnValue;

@@ -24,24 +24,24 @@ describe('Model#save()', function () {
 	var Character = Registry.createModel({
 		type: 'Character',
 
-		defaults: {
-			name: null,
-			description: null,
-			modified: null,
-			thumbnail: null,
-			resourceURI: null,
-			urls: []
-		},
+		allowedKeys: [
+			'name',
+			'description',
+			'modified',
+			'thumbnail',
+			'resourceURI',
+			'urls'
+		],
 
 		relationshipDefinitions: 'belongsToComic'
 	});
 
 	var Comic = Registry.createModel({
 		type: 'Comic',
-		defaults: {
-			title: null,
-			pageCount: null
-		},
+		allowedKeys: [
+			'title',
+			'pageCount'
+		],
 		relationshipDefinitions: 'hasCharacter'
 	});
 
@@ -62,6 +62,8 @@ describe('Model#save()', function () {
 			before(function (done) {
 				character
 					.connectTo(comic)
+					.connectTo(comic)
+					.connectTo({type: 'Comic', id: '13722'})
 					.save()
 					.then(function (rv) {
 						returnValue = rv;
@@ -84,12 +86,14 @@ describe('Model#save()', function () {
 				var opts = character.createRecord.getCall(0).args[1];
 				expect(opts.relationshipUpdates.length).to.be(2);
 				var update1 = opts.relationshipUpdates[0];
+				var update2 = opts.relationshipUpdates[1];
 				expect(update1.action).to.be('create');
+				expect(update1.type).to.be('Comic');
 				expect(update1.direction).to.be('belongsTo');
 				expect(update1.item.type).to.be('Comic');
 				expect(update1.item.id).to.be('foobar');
-				var update2 = opts.relationshipUpdates[1];
 				expect(update2.action).to.be('create');
+				expect(update2.type).to.be('Comic');
 				expect(update2.direction).to.be('belongsTo');
 				expect(update2.item.type).to.be('Comic');
 				expect(update2.item.id).to.be('13722');
@@ -147,8 +151,9 @@ describe('Model#save()', function () {
 
 			it('has empty relationships', function () {
 				var attrs = character.createRecord.getCall(0).args[0];
-				expect(Object.keys(attrs.relationships.has).length).to.be(0);
-				expect(Object.keys(attrs.relationships.belongsTo).length).to.be(0);
+				var hasRelationships = Object.prototype
+					.hasOwnProperty.call(attrs, 'relationships');
+				expect(hasRelationships).to.be(false);
 			});
 
 			it('calls createRecord() without relationship updates', function () {
@@ -187,6 +192,7 @@ describe('Model#save()', function () {
 
 			before(function (done) {
 				character
+					.connectTo(comic)
 					.connectTo(comic)
 					.save()
 					.then(function (rv) {

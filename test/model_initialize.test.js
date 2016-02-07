@@ -11,12 +11,12 @@ describe('Model initalization', function () {
 
 	var Character = Registry.createModel({
 		type: 'Character',
-		defaults: {
-			name: null,
-			description: null,
-			modified: null,
-			urls: []
-		}
+		allowedKeys: [
+			'name',
+			'description',
+			'modified',
+			'urls'
+		]
 	});
 
 	describe('when record is new', function () {
@@ -25,7 +25,7 @@ describe('Model initalization', function () {
 		var character = Character.create(attrs);
 
 		it('does not have an .id', function () {
-			expect(character.id).to.be(null);
+			expect(character.id).to.be(undefined);
 			expect(character.isNew()).to.be(true);
 		});
 
@@ -62,60 +62,59 @@ describe('Model initalization', function () {
 	describe('without relationships', function () {
 		var Character = Registry.createModel({
 			type: 'Character',
-			defaults: {
-				name: null,
-				description: null,
-				modified: null,
-				thumbnail: null,
-				resourceURI: null,
-				urls: []
-			}
-		});
-
-		var Comic = Registry.createModel({
-			type: 'Comic',
-			defaults: {}
+			allowedKeys: [
+				'name',
+				'description',
+				'modified',
+				'thumbnail',
+				'resourceURI',
+				'urls'
+			]
 		});
 
 		var character = Character.create(characterFixture);
-		var comic = character.relationships.belongsTo.Comic[0];
+		var belongsTo = character.relationships.belongsTo;
+		var has = character.relationships.has;
 
-		it('relationships are not model instances', function () {
-			expect(comic).not.to.be.a(Comic);
-			expect(comic.save).to.be(undefined);
+		it('has no belongsTo keys', function () {
+			expect(Object.keys(belongsTo).length).to.be(0);
+		});
+
+		it('has no has keys', function () {
+			expect(Object.keys(has).length).to.be(0);
 		});
 	});
 
 	describe('with relationships', function () {
 		var Character = Registry.createModel({
 			type: 'Character',
-			defaults: {
-				name: null,
-				description: null,
-				modified: null,
-				thumbnail: null,
-				resourceURI: null,
-				urls: []
-			},
+			allowedKeys: [
+				'name',
+				'description',
+				'modified',
+				'thumbnail',
+				'resourceURI',
+				'urls'
+			],
 			relationshipDefinitions: 'belongsToComic'
 		});
 
 		var Comic = Registry.createModel({
 			type: 'Comic',
-			defaults: {
-				title: null,
-				pageCount: null
-			},
+			allowedKeys: [
+				'title',
+				'pageCount'
+			],
 			relationshipDefinitions: 'belongsToCreator hasCharacter'
 		});
 
 		Registry.createModel({
 			type: 'Creator',
-			defaults: {
-				firstName: null,
-				lastName: null,
-				thumbnail: null
-			},
+			allowedKeys: [
+				'firstName',
+				'lastName',
+				'thumbnail'
+			],
 			relationshipDefinitions: 'hasComic'
 		});
 

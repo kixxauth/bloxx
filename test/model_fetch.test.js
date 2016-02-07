@@ -38,34 +38,34 @@ describe('Model#fetch()', function () {
 	var Character = Registry.createModel({
 		type: 'Character',
 
-		defaults: {
-			name: null,
-			description: null,
-			modified: null,
-			thumbnail: null,
-			resourceURI: null,
-			urls: []
-		},
+		allowedKeys: [
+			'name',
+			'description',
+			'modified',
+			'thumbnail',
+			'resourceURI',
+			'urls'
+		],
 
 		relationshipDefinitions: 'belongsToComic'
 	});
 
 	var Comic = Registry.createModel({
 		type: 'Comic',
-		defaults: {
-			title: null,
-			pageCount: null
-		},
+		allowedKeys: [
+			'title',
+			'pageCount'
+		],
 		relationshipDefinitions: 'hasCharacter belongsToCreator'
 	});
 
 	var Creator = Registry.createModel({
 		type: 'Creator',
-		defaults: {
-			firstName: null,
-			lastName: null,
-			thumbnail: null
-		},
+		allowedKeys: [
+			'firstName',
+			'lastName',
+			'thumbnail'
+		],
 		relationshipDefinitions: 'hasComic'
 	});
 
