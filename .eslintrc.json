@@ -32,6 +32,10 @@
             2,
             {"max": 1}
         ],
+        "no-undef": [
+            2,
+            {"typeof": true}
+        ],
         "semi": [
             2,
             "always"
