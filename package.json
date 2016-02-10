@@ -1,6 +1,6 @@
 {
   "name"        : "bloxx",
-  "version"     : "1.0.2",
+  "version"     : "1.0.3",
   "description" : "Immutable JavaScript Models for any datastore.",
   "main"        : "lib/bloxx.js",
   "scripts": {
