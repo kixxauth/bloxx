@@ -1,8 +1,8 @@
 {
-  "name"        : "bloxx",
-  "version"     : "1.0.3",
-  "description" : "Immutable JavaScript Models for any datastore.",
-  "main"        : "lib/bloxx.js",
+  "name": "bloxx",
+  "version": "1.0.3",
+  "description": "Immutable JavaScript Models for any datastore.",
+  "main": "lib/bloxx.js",
   "scripts": {
     "test": "eslint . && mocha --recursive",
     "lint": "eslint ."
@@ -11,16 +11,16 @@
     "brixx": "1.6.2"
   },
   "devDependencies": {
-    "bluebird"  : "~3.2.0",
-    "eslint"    : "~1.10.0",
-    "expect.js" : "~0.3.0",
-    "lodash"    : "~4.2.0",
-    "mocha"     : "~2.4.0",
-    "sinon"     : "~1.17.0"
+    "bluebird": "3.5.3",
+    "eslint": "5.15.1",
+    "expect.js": "0.3.1",
+    "lodash": "4.17.11",
+    "mocha": "6.0.2",
+    "sinon": "7.2.7"
   },
   "repository": {
-    "type" : "git",
-    "url"  : "git+https://github.com/kixxauth/bloxx.git"
+    "type": "git",
+    "url": "git+https://github.com/kixxauth/bloxx.git"
   },
   "keywords": [
     "model",
@@ -28,9 +28,9 @@
     "factory",
     "immutable"
   ],
-  "author"  : "Kris Walker <kris@kixx.name> (www.kixx.name)",
-  "license" : "MIT",
-  "bugs"    : {
+  "author": "Kris Walker <kris@kixx.name> (www.kixx.name)",
+  "license": "MIT",
+  "bugs": {
     "url": "https://github.com/kixxauth/bloxx/issues"
   }
 }
