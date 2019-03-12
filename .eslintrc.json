@@ -1,4 +1,11 @@
 {
+    "extends": "eslint:recommended",
+    "env": {
+        "browser": true
+    },
+    "globals": {
+        "Promise": false
+    },
     "rules": {
         "indent": [
             2,
@@ -44,9 +51,5 @@
             2,
             "function"
         ]
-    },
-    "env": {
-        "browser": true
-    },
-    "extends": "eslint:recommended"
+    }
 }
